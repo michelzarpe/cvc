@@ -1,0 +1,1350 @@
+{
+	"info": {
+		"_postman_id": "f840640e-dae1-48ec-a4d7-a1156ae8b6b1",
+		"name": "cvc",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "gateway-zuul",
+			"item": [
+				{
+					"name": "cvc-cliente",
+					"item": [
+						{
+							"name": "findAll",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8765/cvc-cliente/clientes/findAll",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8765",
+									"path": [
+										"cvc-cliente",
+										"clientes",
+										"findAll"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "pacotesFinalizados",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8765/cvc-cliente/clientes/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8765",
+									"path": [
+										"cvc-cliente",
+										"clientes",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteById",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8765/cvc-cliente/clientes/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8765",
+									"path": [
+										"cvc-cliente",
+										"clientes",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "post",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nome\":\"TESTE\",\n    \"email\":\"teste@gmail.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8765/cvc-cliente/clientes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8765",
+									"path": [
+										"cvc-cliente",
+										"clientes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "put",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nome\":\"TESTE\",\n    \"email\":\"teste@gmail.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8765/cvc-cliente/clientes/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8765",
+									"path": [
+										"cvc-cliente",
+										"clientes",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "pacotesFinalizados",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8765/cvc-cliente/clientes/1/pacotesFinalizados",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8765",
+									"path": [
+										"cvc-cliente",
+										"clientes",
+										"1",
+										"pacotesFinalizados"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "cvc-eureka",
+					"item": [
+						{
+							"name": "eureka-dashboard",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8761/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8761",
+									"path": [
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "cvc-disparador-email",
+					"item": [
+						{
+							"name": "sendEmail",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \t\"idCliente\":2,\n\t    \"idPacoteViagem\":2,\n\t    \"idAvaliacao\":2,\n\t    \"email\":\"COLCOARSEUEMAIL@gmail.com\",\n\t    \"nome\":\"Michel Zarpelon\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8765/cvc-email/email/COLCOARSEUEMAIL@gmail.com",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8765",
+									"path": [
+										"cvc-email",
+										"email",
+										"COLCOARSEUEMAIL@gmail.com"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "cvc-rabbitmq",
+					"item": [
+						{
+							"name": "sendEmail",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \t\"idCliente\":2,\n\t    \"idPacoteViagem\":2,\n\t    \"idAvaliacao\":2,\n\t    \"email\":\"COLCOARSEUEMAIL@gmail.com\",\n\t    \"nome\":\"Michel Zarpelon\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8765/cvc-rabbitmq/rabbitmq",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8765",
+									"path": [
+										"cvc-rabbitmq",
+										"rabbitmq"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "cvc-config-server",
+					"item": [
+						{
+							"name": "cvc-configs",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8888/cvc-email/default",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"cvc-email",
+										"default"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "cvc-avaliacao",
+					"item": [
+						{
+							"name": "pergunta",
+							"item": [
+								{
+									"name": "findAll",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8765/cvc-avaliacao/pergunta/findAll",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8765",
+											"path": [
+												"cvc-avaliacao",
+												"pergunta",
+												"findAll"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "findById",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8765/cvc-avaliacao/pergunta/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8765",
+											"path": [
+												"cvc-avaliacao",
+												"pergunta",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "deleteById",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8765/cvc-avaliacao/pergunta/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8765",
+											"path": [
+												"cvc-avaliacao",
+												"pergunta",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "post",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"descricao\":\"testes\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8765/cvc-avaliacao/pergunta/",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8765",
+											"path": [
+												"cvc-avaliacao",
+												"pergunta",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "put",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"descricao\":\"teste@gmail.com\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8765/cvc-avaliacao/pergunta/4",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8765",
+											"path": [
+												"cvc-avaliacao",
+												"pergunta",
+												"4"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "avaliacao",
+							"item": [
+								{
+									"name": "findAll",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8765/cvc-avaliacao/avaliacao/findAll",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8765",
+											"path": [
+												"cvc-avaliacao",
+												"avaliacao",
+												"findAll"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "findById",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8765/cvc-avaliacao/avaliacao/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8765",
+											"path": [
+												"cvc-avaliacao",
+												"avaliacao",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "deleteById",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8765/cvc-avaliacao/avaliacao/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8765",
+											"path": [
+												"cvc-avaliacao",
+												"avaliacao",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "post",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"idPacoteViagem\":56,\n    \"status\":\"RESPONDIDO\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8765/cvc-avaliacao/avaliacao/",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8765",
+											"path": [
+												"cvc-avaliacao",
+												"avaliacao",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "put",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"idPacoteViagem\":56,\n    \"status\":\"RESPONDIDO\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8765/cvc-avaliacao/avaliacao/3",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8765",
+											"path": [
+												"cvc-avaliacao",
+												"avaliacao",
+												"3"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "anexo",
+							"item": [
+								{
+									"name": "findAll",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8765/cvc-avaliacao/anexos/findAll",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8765",
+											"path": [
+												"cvc-avaliacao",
+												"anexos",
+												"findAll"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "findById",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8765/cvc-avaliacao/anexos/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8765",
+											"path": [
+												"cvc-avaliacao",
+												"anexos",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "deleteById",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8765/cvc-avaliacao/anexos/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8765",
+											"path": [
+												"cvc-avaliacao",
+												"anexos",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "post",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"IdCliente\":1,\n    \"idAvaliacao\":1,\n    \"arquivo\":\"XXXXXX\",\n    \"type\":\"FOTO\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8765/cvc-avaliacao/avaliacao/",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8765",
+											"path": [
+												"cvc-avaliacao",
+												"avaliacao",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "put",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"IdCliente\":1,\n    \"idAvaliacao\":1,\n    \"arquivo\":\"XXXXXX\",\n    \"type\":\"FOTO\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8765/cvc-avaliacao/avaliacao/3",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8765",
+											"path": [
+												"cvc-avaliacao",
+												"avaliacao",
+												"3"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "resposta",
+							"item": [
+								{
+									"name": "findAll",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8765/cvc-avaliacao/resposta/findAll",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8765",
+											"path": [
+												"cvc-avaliacao",
+												"resposta",
+												"findAll"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "findById",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8765/cvc-avaliacao/resposta/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8765",
+											"path": [
+												"cvc-avaliacao",
+												"resposta",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "deleteById",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8765/cvc-avaliacao/resposta/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8765",
+											"path": [
+												"cvc-avaliacao",
+												"resposta",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "post",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"idCliente\":1,\n    \"nota\":9,\n    \"idAvaliacaoPergunta\":1\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8765/cvc-avaliacao/resposta/",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8765",
+											"path": [
+												"cvc-avaliacao",
+												"resposta",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "put",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"idCliente\":1,\n    \"nota\":9,\n    \"idAvaliacaoPergunta\":1\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8765/cvc-avaliacao/avaliacao/3",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8765",
+											"path": [
+												"cvc-avaliacao",
+												"avaliacao",
+												"3"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "resposta Copy",
+							"item": [
+								{
+									"name": "findAll",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8765/cvc-avaliacao/avaliacaoPergunta/findAll",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8765",
+											"path": [
+												"cvc-avaliacao",
+												"avaliacaoPergunta",
+												"findAll"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "findById",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8765/cvc-avaliacao/avaliacaoPergunta/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8765",
+											"path": [
+												"cvc-avaliacao",
+												"avaliacaoPergunta",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "deleteById",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8765/cvc-avaliacao/avaliacaoPergunta/3",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8765",
+											"path": [
+												"cvc-avaliacao",
+												"avaliacaoPergunta",
+												"3"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "post",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"idPergunta\":1,\n    \"idAvaliacao\":1\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8765/cvc-avaliacao/avaliacaoPergunta/",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8765",
+											"path": [
+												"cvc-avaliacao",
+												"avaliacaoPergunta",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "put",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"idPergunta\":1,\n    \"idAvaliacao\":1\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8765/cvc-avaliacao/avaliacaoPergunta/3",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8765",
+											"path": [
+												"cvc-avaliacao",
+												"avaliacaoPergunta",
+												"3"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "cvc-viagens",
+					"item": [
+						{
+							"name": "viagem",
+							"item": [
+								{
+									"name": "findAll",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8765/cvc-viagens/viagens/findAll",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8765",
+											"path": [
+												"cvc-viagens",
+												"viagens",
+												"findAll"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "findById",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8765//cvc-viagens/viagens/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8765",
+											"path": [
+												"",
+												"cvc-viagens",
+												"viagens",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "deleteById",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8765/cvc-viagens/viagens/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8765",
+											"path": [
+												"cvc-viagens",
+												"viagens",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "post",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"descricao\":\"testes\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8765/cvc-viagens/viagens",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8765",
+											"path": [
+												"cvc-viagens",
+												"viagens"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "put",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"descricao\":\"teste@gmail.com\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8765/cvc-viagens/viagens/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8765",
+											"path": [
+												"cvc-viagens",
+												"viagens",
+												"1"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "pacote viagem",
+							"item": [
+								{
+									"name": "findAll",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8765/cvc-viagens/pacoteViagens/findAll",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8765",
+											"path": [
+												"cvc-viagens",
+												"pacoteViagens",
+												"findAll"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "findById",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8765/cvc-viagens/pacoteViagens/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8765",
+											"path": [
+												"cvc-viagens",
+												"pacoteViagens",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "deleteById",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8765/cvc-viagens/pacoteViagens/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8765",
+											"path": [
+												"cvc-viagens",
+												"pacoteViagens",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "post",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n   \"idViagem\":\"7\",\n   \"idAvaliacao\":null,\n   \"descricao\":\"Alguma coisa\",\n   \"dataInicio\":\"2021-05-19T12:02:02-03:00\",\n   \"dataFim\":\"2021-06-21T12:02:02-03:00\"\t\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8765/cvc-viagens/pacoteViagens",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8765",
+											"path": [
+												"cvc-viagens",
+												"pacoteViagens"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "put",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n   \"idViagem\":\"5\",\n   \"idAvaliacao\":null,\n   \"descricao\":\"Alguma coisa a MAIS\",\n   \"dataInicio\":\"2021-05-18T12:02:02-03:00\",\n   \"dataFim\":\"2021-06-21T12:02:02-03:00\"\t\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8765/cvc-viagens/pacoteViagens/5",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8765",
+											"path": [
+												"cvc-viagens",
+												"pacoteViagens",
+												"5"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "findAllPacoteViagemByDataFim",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8765/cvc-viagens/pacoteViagens/cliente/4?dataFim=2021-09-04T00:00:02-03:00",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8765",
+											"path": [
+												"cvc-viagens",
+												"pacoteViagens",
+												"cliente",
+												"4"
+											],
+											"query": [
+												{
+													"key": "dataFim",
+													"value": "2021-09-04T00:00:02-03:00"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "cliente pacote viagem",
+							"item": [
+								{
+									"name": "findAll",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8765/cvc-viagens/clientePacoteViagens/findAll",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8765",
+											"path": [
+												"cvc-viagens",
+												"clientePacoteViagens",
+												"findAll"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "findById",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8765/cvc-viagens/clientePacoteViagens/cliente/1/pacote/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8765",
+											"path": [
+												"cvc-viagens",
+												"clientePacoteViagens",
+												"cliente",
+												"1",
+												"pacote",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "deleteById",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8765/cvc-viagens/clientePacoteViagens/cliente/1/pacote/1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8765",
+											"path": [
+												"cvc-viagens",
+												"clientePacoteViagens",
+												"cliente",
+												"1",
+												"pacote",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "post",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"idCliente\":\"895515\",\n    \"idPacoteViagem\":\"10\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8765/cvc-viagens/clientePacoteViagens",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8765",
+											"path": [
+												"cvc-viagens",
+												"clientePacoteViagens"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "put",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"idCliente\":\"1\",\n    \"idPacoteViagem\":\"1\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8765/cvc-viagens/pacoteViagens/cliente/{idCliente}/pacote/{idPacote}",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8765",
+											"path": [
+												"cvc-viagens",
+												"pacoteViagens",
+												"cliente",
+												"{idCliente}",
+												"pacote",
+												"{idPacote}"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}
