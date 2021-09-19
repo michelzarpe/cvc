@@ -1,4 +1,4 @@
-# CVC Arquitetura
+# Arquitetura
 
 ### Requisitos: 
 	● Ao ser finalizada a viagem, ou seja, um dia após a data final do pacote que foi adquirido, deve ser enviado um e-mail aos viajantes com um link onde é possível realizar a avaliação;
