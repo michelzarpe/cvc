@@ -27,10 +27,10 @@
 	13. Virtualização: Docker
 
 ### Arquitetura e microsserviços:  
-![Alt text](cvc-microserviços.png?raw=true "Arquitetura")
+![Alt text](microserviços.png?raw=true "Arquitetura")
 
 ### Importar Postman  
-Na raiz do projeto tem um arquivo exportado do postman (cvc.postman_collection.json) com todos os endpoints mapeados para executar.
+Na raiz do projeto tem um arquivo exportado do postman (postman_collection.json) com todos os endpoints mapeados para executar.
 
 ### Endpoint por microsserviços:
 1. ???-cliente:  
