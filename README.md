@@ -33,20 +33,20 @@
 Na raiz do projeto tem um arquivo exportado do postman (cvc.postman_collection.json) com todos os endpoints mapeados para executar.
 
 ### Endpoint por microsserviços:
-1. cvc-cliente:  
+1. ???-cliente:  
     	● Inserir/Alterar/Retornar/Excluir Cliente  
     	● Retornar pacotes finalizados do cliente  
 
-2. cvc-viagens:  
+2. ???-viagens:  
     	● Inserir/Alterar/Excluir/Retornar Viagem  
     	● Inserir/Alterar/Excluir/Retornar pacote por viagem  
     	● Inserir/Alterar/Excluir/Retornar Pacote de viagem para cliente      
     	● Retornar pacotes finalizados por clientes   
       
-3. cvc-disparador-email:  
+3. ???-disparador-email:  
     	● Enviar email para cada pacote de viagem com avaliação
 
-4. cvc-avaliacao:  
+4. ???-avaliacao:  
     	● Inserir/Alterar/Excluir/Retornar Avaliação para pacote de viagem  
     	● Inserir/Alterar/Excluir/Retornar Anexo para uma avaliação  
     	● Inserir/Alterar/Retornar/Excluir Pergunta para uma avaliação  
@@ -59,12 +59,12 @@ Na raiz do projeto tem um arquivo exportado do postman (cvc.postman_collection.j
 	1. Na raiz do projeto tem arquivo docker-compose.yml executar: docker-compose up -d
 	2. Importar todos os projetos na IDE preferida.
 	3. Compilar o projeto: librabbitmq. Lib de uma classe para serialização e deserialização.
-	4. Executar uma vez o projeto: cvc-config-server
-	5. Executar uma vez o projeto: cvc-eureka-service
-	6. Executar uma vez o projeto: cvc-api-gateway-zuul
-	7. Executar uma vez o varias instâncias do projeto: cvc-rabbitmq, cvc-disparador-email, cvc-viagens, cvc-cliente, cvc-avaliacao
+	4. Executar uma vez o projeto: ???-config-server
+	5. Executar uma vez o projeto: ???-eureka-service
+	6. Executar uma vez o projeto: ???-api-gateway-zuul
+	7. Executar uma vez o varias instâncias do projeto: ???-rabbitmq, ???-disparador-email, ???-viagens, ???-cliente, ???-avaliacao
  
   
   #### Observação: Não foi projetado servidor de autenticação (Oauth2) para colocar como clientes os micro serviços e ter usuários com perfis/permissão. 
-  #### Cada microsserviço que contem as regras de negócio poder ser iniciado varias instâncias, pois é gerado um novo id e porta para inserir no cvc-eureka-server;
+  #### Cada microsserviço que contem as regras de negócio poder ser iniciado varias instâncias, pois é gerado um novo id e porta para inserir no ???-eureka-server;
   
